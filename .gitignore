@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+.cache/
+.sglang.log
+.sglang.pid
+*.log
+*.pid
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+venv/
+bench-results/
+*.pem
+*.key
+.secrets/
