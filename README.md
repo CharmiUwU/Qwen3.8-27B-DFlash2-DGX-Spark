@@ -1,13 +1,24 @@
 # Qwen3.8-27B DFlash2 on one DGX Spark
 
 <p align="center">
-  <sub>recipe by <a href="https://github.com/CharmiUwU">CharmiUwU</a></sub>
+  <sub>DFlash2 extension by <a href="https://github.com/CharmiUwU">CharmiUwU</a></sub>
+  <br>
+  <sub>based on the original <a href="https://github.com/MiaAI-Lab/Qwen3.8-27B-SGLang-DGX-Spark">Qwen3.8 DGX Spark recipe by MiaAI-Lab</a></sub>
   <br><br>
   <a href="LICENSE"><img src="https://img.shields.io/badge/recipe-MIT-blue.svg" alt="MIT recipe license"></a>
   <a href="LICENSES/Apache-2.0.txt"><img src="https://img.shields.io/badge/overlay-Apache--2.0-green.svg" alt="Apache 2.0 overlay license"></a>
   <img src="https://img.shields.io/badge/hardware-DGX%20Spark-76B900?logo=nvidia&logoColor=white" alt="NVIDIA DGX Spark">
   <img src="https://img.shields.io/badge/speculative-DFlash2-orange" alt="DFlash2">
 </p>
+
+> [!IMPORTANT]
+> **Primary base credit:** this repository is a DFlash2 extension of
+> [MiaAI-Lab/Qwen3.8-27B-SGLang-DGX-Spark](https://github.com/MiaAI-Lab/Qwen3.8-27B-SGLang-DGX-Spark).
+> MiaAI-Lab created the Qwen3.8-on-DGX-Spark foundation used here: the
+> model-specific SGLang serving scaffold, GB10 defaults, NVFP4 target path,
+> reasoning/tool setup, and DSpark/MTP benchmarking lineage. This repository
+> adds the DFlash2 integration, quantized-selector compatibility overlay,
+> exact-revision packaging, validation, and public operational tooling.
 
 One-node NVIDIA DGX Spark recipe for
 [`RadixArk/Qwen3.8-27B-NVFP4`](https://huggingface.co/RadixArk/Qwen3.8-27B-NVFP4)
@@ -352,12 +363,17 @@ Common issues:
 | `docs/IMPLEMENTATION.md` | Merge design, runtime path, and upgrade procedure |
 | `AUDIT.md` | Live validation and dated performance |
 | `CREDITS.md` | Upstream attribution and license notes |
+| `NOTICE.md` | Durable identification of the MiaAI-Lab primary base recipe |
 
 ---
 
 ## Credits and licenses
 
-Full attribution: [`CREDITS.md`](CREDITS.md).
+**Primary base recipe:**
+[MiaAI-Lab/Qwen3.8-27B-SGLang-DGX-Spark](https://github.com/MiaAI-Lab/Qwen3.8-27B-SGLang-DGX-Spark).
+Thank you to MiaAI-Lab for publishing the DGX Spark Qwen3.8 recipe this work
+extends. Full attribution and the inherited/new contribution breakdown:
+[`CREDITS.md`](CREDITS.md).
 
 The recipe scripts and documentation are MIT licensed. The SGLang-derived
 overlay retains Apache-2.0 lineage; see [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)
